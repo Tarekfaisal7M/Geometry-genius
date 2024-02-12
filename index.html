@@ -17,17 +17,23 @@
 
     </header>
     <main>
-      <div class="flex">
+      <div class="flex flex-col md:flex-row">
         <!-- card content container -->
-        <div class="flex-1">
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <!--triangle-->
           <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+            <figure><img src="images/triangle.png" alt="Shoes" /></figure>
             <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+              <h2 class="card-title">Triangle</h2>
+              <p class="text-center">Area(a)=0.5 x b x h</p>
+             <div>
+              <input class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="b">
+              <span class="mr-4 ml-3">cm</span>
+              <input class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="h">
+              <span>cm</span>
+             </div>
+              <div class="card-actions">
+                <button onclick="triangleCalculateArea()" class="btn btn-primary w-full">Calculate</button>
               </div>
             </div>
           </div>
@@ -69,9 +75,10 @@
         </div>
         <!-- out put area container -->
         <div class="w-96 border-2 border-gray-700 rounded-md">
-          <h3 class="text-3xl text-center">Area Calculation</h3>
+          <h3 class="text-3xl text-center p-4">Area Calculation</h3>
         </div>
       </div>
     </main>
+    <script src="scripts/Tr.js"></script>
   </body>
 </html>
